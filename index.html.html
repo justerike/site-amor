@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Para o amor da minha vida ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h1, h2 {
+  margin-bottom: 15px;
+}
+
+p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.card {
+  background: rgba(255,255,255,0.18);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.25);
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  background: white;
+  color: #ff4f7a;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Galeria */
+.galeria {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.galeria img {
+  width: 200px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.35);
+}
+
+/* Música */
+.music {
+  margin-top: 30px;
+}
+
+.music iframe {
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+/* Vídeo */
+iframe {
+  width: 90%;
+  max-width: 600px;
+  height: 340px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+/* Corações */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  color: rgba(255,255,255,0.85);
+  font-size: 20px;
+  animation: float 6s linear infinite;
+}
+
+@keyframes float {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-110vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<section>
+  <div class="card">
+    <h1>❤️ Meu amor ❤️</h1>
+    <p>
+      Eu criei esse site porque o que sinto por você
+      não cabe só em palavras.<br><br>
+      Cada música, cada imagem e cada detalhe aqui
+      é um pedacinho do meu amor por você.
+    </p>
+    <button onclick="alert('Eu te amo, hoje e sempre ❤️')">
+      Clique aqui 💌
+    </button>
+  </div>
+</section>
+
+<!-- FOTOS DE VOCÊS -->
+<section>
+  <h2>📸 Nossos momentos</h2>
+  <div class="galeria">
+    <img src="/mnt/data/IMG_2025-02-01-20-53-58-266.jpg">
+    <img src="/mnt/data/IMG_2025-02-12-19-46-10-227.jpg">
+    <img src="/mnt/data/IMG_2025-03-06-19-56-48-472.jpg">
+    <img src="/mnt/data/IMG_2025-03-28-07-17-55-740.jpg">
+  </div>
+</section>
+
+<!-- MÚSICAS -->
+<section>
+  <h2>🎵 Músicas que me lembram você</h2>
+
+  <div class="music">
+    <p>
+      Essa música me lembra o jeito calmo que você tem de me fazer sentir em casa.
+      É como se cada nota dissesse: <em>“fica, eu cuido de você”</em>.
+    </p>
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/MKYY0IlTMw4"
+      frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div class="music">
+    <p>
+      Quando ela toca, tudo ao redor perde a importância.
+      É a trilha sonora dos nossos momentos mais verdadeiros.
+    </p>
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/oadhHk2xs6c"
+      frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div class="music">
+    <p>
+      Essa música carrega saudade, amor e entrega.
+      Ela me lembra que escolher você sempre vale a pena.
+    </p>
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/ZuIDh4XIzxU"
+      frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
+
+<!-- VÍDEO ESPECIAL -->
+<section>
+  <h2>🎥 Um vídeo que você ama</h2>
+  <p>
+    Esse vídeo é a sua cara, e agora ele faz parte
+    desse cantinho que eu criei só pra você.
+  </p>
+
+  <iframe src="https://www.youtube.com/embed/PBagXQLdOeE"
+    frameborder="0" allowfullscreen></iframe>
+</section>
+
+<!-- SNOOPY -->
+<section>
+  <h2>🐾 Porque eu sei que você ama o Snoopy</h2>
+  <div class="galeria">
+    <img src="https://i.pinimg.com/1200x/f9/18/52/f91852af8b43b384332d89a2036449c4.jpg">
+    <img src="https://i.pinimg.com/736x/a6/b6/eb/a6b6ebbe47b82513a2ed159b2377efd6.jpg">
+    <img src="https://i.pinimg.com/736x/4c/1f/f1/4c1ff10576e65dcdc1657747607c1560.jpg">
+  </div>
+</section>
+
+<script>
+function criarCoracao() {
+  const c = document.createElement("div");
+  c.classList.add("heart");
+  c.innerHTML = "❤️";
+  c.style.left = Math.random() * 100 + "vw";
+  c.style.fontSize = (Math.random() * 22 + 10) + "px";
+  document.body.appendChild(c);
+  setTimeout(() => c.remove(), 6000);
+}
+setInterval(criarCoracao, 300);
+</script>
+
+</body>
+</html>
